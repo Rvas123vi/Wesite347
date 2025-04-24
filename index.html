@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --blue: #003366;
+      --white: #ffffff;
+      --orange: #ff6600;
+      --bg-dark: #121212;
+      --text-light: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('wallpaper.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-light);
+      overflow-x: hidden;
+      transition: background 0.5s, color 0.5s;
+    }
+
+    body.light-mode {
+      background-color: var(--white);
+      color: var(--blue);
+    }
+
+    header {
+      background-color: var(--blue);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--orange);
+      margin: 0;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .profile img {
+      width: 150px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    .profile video {
+      width: 300px;
+      margin-top: 20px;
+      border: 2px solid white;
+      border-radius: 10px;
+    }
+
+    .about-me {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      text-align: center;
+    }
+
+    .links, .github-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .links a {
+      background-color: var(--orange);
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .github-logos a {
+      font-size: 40px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .led {
+      height: 5px;
+      background: linear-gradient(90deg, #00f, #fff, #f60);
+      background-size: 600% 600%;
+      animation: ledAnimation 5s linear infinite;
+    }
+
+    @keyframes ledAnimation {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .salju {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .clock {
+      text-align: center;
+      margin: 30px;
+    }
+
+    #clock {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      background-color: var(--blue);
+    }
+
+    .mode-toggle {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .mode-toggle button {
+      padding: 8px 16px;
+      background-color: var(--orange);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #animal {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      background-image: url('hewan.png');
+      background-size: cover;
+      z-index: 1000;
+      top: 50px;
+      left: 50px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portofolio Saya</h1>
+  </header>
+
+  <div class="mode-toggle">
+    <button onclick="toggleMode()">Ubah Mode</button>
+  </div>
+
+  <div class="led"></div>
+
+  <div class="profile">
+    <img src="profile.jpg" alt="Foto Profil">
+    <video controls src="video.mp4"></video>
+  </div>
+
+  <div class="about-me">
+    <h2>Tentang Saya</h2>
+    <p>Halo! Saya seorang pengembang web yang antusias dengan desain bersih, fitur interaktif, dan pengalaman pengguna yang menyenangkan. Saya suka membangun aplikasi web kreatif, dan selalu siap belajar hal baru.</p>
+  </div>
+
+  <div class="links">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+    <a href="#">Link 5</a>
+    <a href="#">Link 6</a>
+  </div>
+
+  <div class="github-logos">
+    <a href="https://github.com/user1" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user2" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user3" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user4" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user5" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user6" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user7" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user8" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user9" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/user10" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+
+  <div class="clock">
+    <div id="clock">00:00</div>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <canvas class="salju"></canvas>
+  <div id="animal"></div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      now.setHours(now.getHours() + 7);
+      const jam = now.getHours().toString().padStart(2, '0');
+      const menit = now.getMinutes().toString().padStart(2, '0');
+      document.getElementById('clock').textContent = `${jam}:${menit}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    // Dark Mode Otomatis Berdasarkan Waktu
+    const hour = new Date().getHours();
+    if (hour >= 18 || hour < 6) {
+      document.body.classList.remove('light-mode');
+    } else {
+      document.body.classList.add('light-mode');
+    }
+
+    const canvas = document.querySelector(".salju");
+    const ctx = canvas.getContext("2d");
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+    let flakes = [];
+
+    function createSnowFlakes() {
+      for (let i = 0; i < 100; i++) {
+        flakes.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          r: Math.random() * 5 + 2,
+          d: Math.random() + 1
+        });
+      }
+    }
+
+    function drawFlakes() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      for (let i = 0; i < flakes.length; i++) {
+        let f = flakes[i];
+        ctx.moveTo(f.x, f.y);
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+      }
+      ctx.fill();
+      moveFlakes();
+    }
+
+    function moveFlakes() {
+      for (let i = 0; i < flakes.length; i++) {
+        let f = flakes[i];
+        f.y += Math.pow(f.d, 2) + 1;
+        if (f.y > h) {
+          flakes[i] = {x: Math.random() * w, y: 0, r: f.r, d: f.d};
+        }
+      }
+    }
+
+    createSnowFlakes();
+    setInterval(drawFlakes, 25);
+
+    const animal = document.getElementById('animal');
+    let x = 50;
+    let y = 50;
+    let dx = 2;
+    let dy = 1.5;
+
+    function moveAnimal() {
+      const maxX = window.innerWidth - 100;
+      const maxY = window.innerHeight - 100;
+
+      x += dx;
+      y += dy;
+
+      if (x <= 0 || x >= maxX) dx *= -1;
+      if (y <= 0 || y >= maxY) dy *= -1;
+
+      animal.style.left = x + 'px';
+      animal.style.top = y + 'px';
+    }
+
+    setInterval(moveAnimal, 20);
+  </script>
+</body>
+</html>
